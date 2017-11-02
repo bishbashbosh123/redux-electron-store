@@ -1,4 +1,4 @@
-const { ipcRenderer, remote } = require('electron');
+const { ipcRenderer, remote } = typeof(window)!=='undefined' ? window.require('electron') : require('electron');
 const { globalName } = require('./constants');
 const objectMerge = require('./utils/object-merge');
 const fillShape = require('./utils/fill-shape');
